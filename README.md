@@ -51,13 +51,13 @@ Use docker-compose.yml file
 
 ### Create kafka topic
 
-` docker exec kafka-broker \                                                  
-kafka-topics --bootstrap-server kafka-broker:9092 \          
---create \               
---topic data-topic`
+    docker exec kafka-broker \                                                  
+    kafka-topics --bootstrap-server kafka-broker:9092 \          
+    --create \               
+    --topic data-topic
 
 ### Run kafka producer
-`docker exec --interactive --tty kafka-broker \
-kafka-console-producer --broker-list kafka-broker:9092 \
---topic data-topic
-`
+    docker exec --interactive --tty kafka-broker \
+    kafka-console-producer --broker-list kafka-broker:9092 \
+    --topic data-topic
+
